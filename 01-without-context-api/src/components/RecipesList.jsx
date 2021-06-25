@@ -18,7 +18,7 @@ const badgeStyle = {
 };
 
 /**
- * Display our recipes list
+ * Display recipes list
  * @param recipes
  * @param onRemoveRecipe
  * @returns {*}
@@ -36,9 +36,14 @@ const RecipesList = ({ recipes = [], onRemoveRecipe }) => {
 
             <div style={recipesContainerStyle}>
                 {
-                    recipes.length ? recipes.map((recipe, index) => {
-                        return <RecipeCard key={index} recipe={recipe} onRemoveRecipe={onRemoveRecipe}/>
-                    }) : <i>Your cookbook is empty, start by creating new recipe.</i>
+                    recipes.length ? recipes.map((recipe, index) =>
+                     <RecipeCard 
+                        key={index} 
+                        recipe={recipe} 
+                        onRemoveRecipe={onRemoveRecipe}
+                    />
+                    ) : 
+                    <i>Your cookbook is empty, start by creating new recipe.</i>
                 }
             </div>
 

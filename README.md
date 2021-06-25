@@ -1,5 +1,6 @@
 # Cookbook example projects
-This is a cookbook example to show you how to access and interact with a state with a context, by comparing a project not using the context api and the same project but with the usage of the context api.
+
+This is a cookbook example to show you how to access and interact with a state with a context, by comparing a project not using the context api and the same project but with the use of the context api.
 
 We will find two almost identical projects, one without context and one with the use of the context api.
 

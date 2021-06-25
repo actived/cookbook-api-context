@@ -20,14 +20,13 @@ const badgeStyle = {
 };
 
 /**
- * Display our recipes list
+ * Display recipes list
  * @returns {*}
  * @constructor
  */
 const RecipesList = () => {
 
-    const recipesContext = useContext(RecipesContext);
-    const { recipes } = recipesContext;
+    const { recipes } = useContext(RecipesContext);
 
     return (
         <div>
@@ -40,9 +39,13 @@ const RecipesList = () => {
 
             <div style={recipesContainerStyle}>
                 {
-                    recipes.length ? recipes.map((recipe, index) => {
-                        return <RecipeCard key={index} recipe={recipe} />
-                    }) : <i>Your cookbook is empty, start by creating new recipe.</i>
+                    recipes.length ? recipes.map((recipe, index) => 
+                        <RecipeCard 
+                            key={index} 
+                            recipe={recipe} 
+                        />
+                    ) : 
+                    <i>Your cookbook is empty, start by creating new recipe.</i>
                 }
             </div>
 
